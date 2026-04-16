@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Streams</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f5efe6;
+            --panel: #fffaf3;
+            --text: #1f2937;
+            --accent: #c2410c;
+            --border: #e5d5c2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: radial-gradient(circle at top, #fff8ef 0%, var(--bg) 60%);
+            color: var(--text);
+        }
+
+        main {
+            width: min(1100px, calc(100% - 32px));
+            margin: 48px auto;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            margin-bottom: 12px;
+        }
+
+        form {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0 16px;
+            flex-wrap: wrap;
+        }
+
+        input, button {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 16px;
+            font: inherit;
+        }
+
+        input {
+            flex: 1 1 280px;
+            background: var(--panel);
+        }
+
+        button {
+            cursor: pointer;
+            background: var(--accent);
+            color: white;
+            border: none;
+        }
+
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            margin: 0 0 8px;
+        }
+
+        .card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Streams de Twitch por juego</h1>
+    <p>Busca un juego y la API te devolverá los streams en vivo disponibles.</p>
+
+    <form id="search-form">
+        <input id="game-input" type="text" placeholder="Ejemplo: Valorant" />
+        <button type="submit">Buscar</button>
+    </form>
+
+    <p id="status"></p>
+    <section id="results"></section>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
