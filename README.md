@@ -1,14 +1,14 @@
-# 🎮 API Twitch Streams Web App
+# 🎮 API Twitch Streams Pagina Web
 
 ## 1. Título del proyecto
 
-**Aplicación web para consulta de transmisiones en vivo de Twitch por videojuego**
+**Pagina web para consulta de transmisiones en vivo de Twitch por videojuego**
 
 ## 2. Descripción general del proyecto
 
-Este proyecto es una aplicación web desarrollada con **Node.js**, **Express** y **JavaScript** que permite consultar transmisiones en vivo de **Twitch** a partir del nombre de un videojuego ingresado por el usuario.
+Este proyecto es una pagina web desarrollada con **Node.js**, **Express** y **JavaScript** que permite consultar transmisiones en vivo de **Twitch** a partir del nombre de un videojuego ingresado por el usuario.
 
-La aplicación combina un frontend simple con un backend que actúa como intermediario entre la interfaz y la API de Twitch. De este modo, el usuario puede buscar un juego, enviar la solicitud al servidor y visualizar los canales en vivo disponibles junto con información relevante como el título del stream, cantidad de espectadores y enlace al canal. 🚀
+La aplicación combina un frontend simple con un backend que actúa como intermediario entre la interfaz y la API de Twitch. De este modo, el usuario puede buscar un juego, enviar la solicitud al servidor y visualizar los canales en vivo disponibles junto con información relevante como el título del stream, cantidad de espectadores y enlace al canal. 
 
 Además, el proyecto trabaja bajo el enfoque de una **API REST**, es decir, una interfaz que permite intercambiar información entre cliente y servidor mediante rutas HTTP bien definidas y respuestas en formato JSON.
 
@@ -74,46 +74,6 @@ Obtiene una lista de transmisiones en vivo relacionadas con el videojuego indica
 GET /api/streams/Valorant
 ```
 
-**Ejemplo de respuesta JSON:**
-
-```json
-{
-  "game": "Valorant",
-  "total": 2,
-  "streams": [
-    {
-      "id": "318286476128",
-      "user_name": "s0mcs",
-      "title": "W STREAMER NRG s0m",
-      "viewer_count": 4969,
-      "started_at": "2026-04-16T11:53:48Z",
-      "language": "en",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_s0mcs-320x180.jpg",
-      "url": "https://www.twitch.tv/s0mcs"
-    },
-    {
-      "id": "316904894040",
-      "user_name": "tarik",
-      "title": "DAY 1 - Twitter @tarik",
-      "viewer_count": 4873,
-      "started_at": "2026-04-16T18:35:56Z",
-      "language": "en",
-      "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_tarik-320x180.jpg",
-      "url": "https://www.twitch.tv/tarik"
-    }
-  ]
-}
-```
-
-**Ejemplo de respuesta cuando no se encuentran resultados:**
-
-```json
-{
-  "game": "JuegoInexistente",
-  "total": 0,
-  "streams": []
-}
-```
 
 ## 7. Instrucciones de instalación y ejecución
 
@@ -198,9 +158,9 @@ fetch("http://localhost:3000/api/streams/Valorant")
 
 Puedes reemplazar estas rutas por las imágenes reales dentro del repositorio:
 
-![Pantalla principal](docs/captura-principal.png)
-![Resultado de búsqueda](docs/captura-resultados.png)
-![Respuesta JSON](docs/captura-json.png)
+![Pantalla principal](Screenshots/Captura-principal.png)
+![Resultado de búsqueda](Screenshots/captura-resultados.png)
+![Respuesta JSON](Screenshots/captura-json.png)
 
 ## 10. Estructura del proyecto
 
@@ -220,8 +180,3 @@ API_PROJECT/
 └── README.md
 ```
 
-## 11. Conclusiones
-
-Este proyecto demuestra cómo integrar una API externa en una aplicación web de forma organizada y funcional. A través del uso de **Express** y la **API de Twitch**, se construyó una solución que transforma solicitudes del usuario en información útil y visualmente accesible.
-
-Además de cumplir con la búsqueda de streams en vivo, el desarrollo permitió aplicar conceptos importantes como autenticación con tokens, consumo de servicios REST, manejo de respuestas JSON y separación entre frontend y backend. En conjunto, representa una base sólida para futuros proyectos web orientados al consumo de APIs. ✅
