@@ -1,4 +1,4 @@
-# 🎮 API Twitch Streams Pagina Web
+#  API Twitch Streams Pagina Web
 
 ## 1. Título del proyecto
 
