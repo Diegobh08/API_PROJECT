@@ -156,8 +156,6 @@ fetch("http://localhost:3000/api/streams/Valorant")
 
 ## 9. Capturas de pantalla
 
-Puedes reemplazar estas rutas por las imágenes reales dentro del repositorio:
-
 ![Pantalla principal](Screenshots/Captura-principal.png)
 ![Resultado de búsqueda](Screenshots/captura-resultados.png)
 ![Respuesta JSON](Screenshots/captura-json.png)
